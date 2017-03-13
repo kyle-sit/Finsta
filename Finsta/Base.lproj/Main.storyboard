@@ -87,7 +87,7 @@
                         <outlet property="signInButton" destination="gue-qK-hNC" id="dmb-WC-snT"/>
                         <outlet property="signUpButton" destination="2dk-wf-L0e" id="N87-iW-D9b"/>
                         <outlet property="userNameTextfield" destination="8w2-k8-7J6" id="W4v-lq-LCg"/>
-                        <segue destination="Tfh-Tw-KuI" kind="presentation" identifier="loginSegue" id="Tq8-lO-Kha"/>
+                        <segue destination="Tfh-Tw-KuI" kind="presentation" identifier="loginSegue" id="t5e-0u-FGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
         <!--Home Page View Controller-->
         <scene sceneID="Ker-Ec-VNe">
             <objects>
-                <viewController id="Tfh-Tw-KuI" customClass="HomePageViewController" customModule="Finsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePage" id="Tfh-Tw-KuI" customClass="HomePageViewController" customModule="Finsta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZDX-zQ-Cf6"/>
                         <viewControllerLayoutGuide type="bottom" id="sDo-Pj-lY2"/>
@@ -105,12 +105,38 @@
                     <view key="view" contentMode="scaleToFill" id="231-CW-iDG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yq7-hP-l9R">
+                                <rect key="frame" x="16" y="103" width="343" height="515"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq1-cG-6zR">
+                                <rect key="frame" x="16" y="20" width="84" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78952452996394007" green="0.94447814404860431" blue="0.95634310233160624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="Tfh-Tw-KuI" eventType="touchUpInside" id="JWM-wA-ANB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AbR-Yt-cKp">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="nTX-z8-C6l">
+                            <connections>
+                                <action selector="logout:" destination="Tfh-Tw-KuI" id="OnW-Og-5Pc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="CBi-rf-2Pj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4I-4L-oaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="142"/>
+            <point key="canvasLocation" x="1031" y="139"/>
         </scene>
     </scenes>
     <resources>

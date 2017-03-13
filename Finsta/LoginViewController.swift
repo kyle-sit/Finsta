@@ -119,7 +119,6 @@ class LoginViewController: UIViewController {
                 
                 self.present(alertController, animated: true) {
                 }
-
             }
         }
     }

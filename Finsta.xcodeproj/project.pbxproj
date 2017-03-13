@@ -13,6 +13,8 @@
 		2757B39E1E74D39700586F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2757B39C1E74D39700586F34 /* LaunchScreen.storyboard */; };
 		2757B3A71E760BF200586F34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3A61E760BF200586F34 /* LoginViewController.swift */; };
 		2757B3A91E7617B700586F34 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3A81E7617B700586F34 /* HomePageViewController.swift */; };
+		2757B3AC1E7627C500586F34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3AB1E7627C500586F34 /* User.swift */; };
+		2757B3AE1E7627D300586F34 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3AD1E7627D300586F34 /* Post.swift */; };
 		B207F73E63DE874B572E19F7 /* Pods_Finsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF6FE33D38B92E40E8C0ACF /* Pods_Finsta.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		2757B39F1E74D39700586F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2757B3A61E760BF200586F34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2757B3A81E7617B700586F34 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		2757B3AB1E7627C500586F34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2757B3AD1E7627D300586F34 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5FF6FE33D38B92E40E8C0ACF /* Pods_Finsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		625210728D7C4993281184DD /* Pods-Finsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finsta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finsta/Pods-Finsta.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 		2757B3921E74D39700586F34 /* Finsta */ = {
 			isa = PBXGroup;
 			children = (
+				2757B3AA1E761E7000586F34 /* Models */,
 				2757B3A51E760BDA00586F34 /* View Controllers */,
 				2757B3931E74D39700586F34 /* AppDelegate.swift */,
 				2757B3971E74D39700586F34 /* Main.storyboard */,
@@ -88,6 +93,15 @@
 				2757B3A81E7617B700586F34 /* HomePageViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2757B3AA1E761E7000586F34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2757B3AB1E7627C500586F34 /* User.swift */,
+				2757B3AD1E7627D300586F34 /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		67A7F220D76D9FD54E5B3815 /* Pods */ = {
@@ -222,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2757B3AC1E7627C500586F34 /* User.swift in Sources */,
 				2757B3A71E760BF200586F34 /* LoginViewController.swift in Sources */,
 				2757B3941E74D39700586F34 /* AppDelegate.swift in Sources */,
 				2757B3A91E7617B700586F34 /* HomePageViewController.swift in Sources */,
+				2757B3AE1E7627D300586F34 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
