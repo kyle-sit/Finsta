@@ -6,5 +6,6 @@ target 'Finsta' do
   use_frameworks!
 
   # Pods for Finsta
+  pod 'Parse'
 
 end
