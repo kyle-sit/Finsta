@@ -32,6 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
         
+        /*window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //Set up tab bar for photo feed
+        let homeFeedNavController = storyboard.instantiateViewController(withIdentifier: "HomePageNavigationController") as! UINavigationController
+        homeFeedNavController.tabBarItem.title = "Photo Feed"
+        homeFeedNavController.tabBarItem.image = UIImage(named: "photoFeed")
+        
+        //set up tab bar for taking a photo
+        let takePhotoNavController = storyboard.instantiateViewController(withIdentifier: "HomePageNavigationController") as! UINavigationController
+        takePhotoNavController.tabBarItem.title = "Take Photo"
+        takePhotoNavController.tabBarItem.image = UIImage(named: "takePhoto")
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [homeFeedNavController, takePhotoNavController]
+        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()*/
+
+        
         return true
     }
 

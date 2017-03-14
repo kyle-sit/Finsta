@@ -15,6 +15,8 @@
 		2757B3A91E7617B700586F34 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3A81E7617B700586F34 /* HomePageViewController.swift */; };
 		2757B3AC1E7627C500586F34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3AB1E7627C500586F34 /* User.swift */; };
 		2757B3AE1E7627D300586F34 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3AD1E7627D300586F34 /* Post.swift */; };
+		2757B3B01E77E6D100586F34 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3AF1E77E6D100586F34 /* TakePhotoViewController.swift */; };
+		2757B3B21E77F30A00586F34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757B3B11E77F30A00586F34 /* ProfileViewController.swift */; };
 		B207F73E63DE874B572E19F7 /* Pods_Finsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF6FE33D38B92E40E8C0ACF /* Pods_Finsta.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		2757B3A81E7617B700586F34 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		2757B3AB1E7627C500586F34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2757B3AD1E7627D300586F34 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2757B3AF1E77E6D100586F34 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
+		2757B3B11E77F30A00586F34 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5FF6FE33D38B92E40E8C0ACF /* Pods_Finsta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finsta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		625210728D7C4993281184DD /* Pods-Finsta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finsta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finsta/Pods-Finsta.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 			children = (
 				2757B3A61E760BF200586F34 /* LoginViewController.swift */,
 				2757B3A81E7617B700586F34 /* HomePageViewController.swift */,
+				2757B3AF1E77E6D100586F34 /* TakePhotoViewController.swift */,
+				2757B3B11E77F30A00586F34 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 				2757B3A71E760BF200586F34 /* LoginViewController.swift in Sources */,
 				2757B3941E74D39700586F34 /* AppDelegate.swift in Sources */,
 				2757B3A91E7617B700586F34 /* HomePageViewController.swift in Sources */,
+				2757B3B21E77F30A00586F34 /* ProfileViewController.swift in Sources */,
+				2757B3B01E77E6D100586F34 /* TakePhotoViewController.swift in Sources */,
 				2757B3AE1E7627D300586F34 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

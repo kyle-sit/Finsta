@@ -9,12 +9,24 @@
 import UIKit
 import Parse
 
-class HomePageViewController: UIViewController {
+class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var feedTableView: UITableView!
+    @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet weak var profileButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        feedTableView.delegate = self
+        feedTableView.dataSource = self
+        
+        takePhotoButton.layer.cornerRadius = 5
+        profileButton.layer.cornerRadius = 5
+        
+        takePhotoButton.clipsToBounds = true
+        profileButton.clipsToBounds = true
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +59,23 @@ class HomePageViewController: UIViewController {
             }
         }
     }
-
+    
+    @IBAction func onTakePhotoClick(_ sender: Any) {
+        self.performSegue(withIdentifier: "takePhotoSegue", sender: nil)
+    }
+    
+    @IBAction func onProfileClick(_ sender: Any) {
+        self.performSegue(withIdentifier: "profileSegue", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
+    
 
     /*
     // MARK: - Navigation
