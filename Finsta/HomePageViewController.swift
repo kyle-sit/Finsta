@@ -15,6 +15,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var profileButton: UIButton!
     
+    var posts: [NSObject]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,30 +63,34 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func onTakePhotoClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "takePhotoSegue", sender: nil)
+        self.performSegue(withIdentifier: "takePhotoSegue", sender: sender)
     }
     
     @IBAction func onProfileClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "profileSegue", sender: nil)
+        self.performSegue(withIdentifier: "profileSegue", sender: sender)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        if let posts = posts {
+            return posts.count;
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = feedTableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
+        let finstaPost = posts?[indexPath.row]
+        //cell.instagramPost = finstaPost as! PFObject
         
+        return cell;
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

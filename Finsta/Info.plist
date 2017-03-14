@@ -34,6 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+<key>NSCameraUsageDescription</key>
+<string>$(Finsta) needs access to use your camera</string>
+
+<key>NSPhotoLibraryUsageDescription</key>
+<string>$(Finsta) needs access to use your photo library</string>
 <key>NSAppTransportSecurity</key>
 <dict>
     <key>NSExceptionDomains</key>

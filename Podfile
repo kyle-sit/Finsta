@@ -7,5 +7,6 @@ target 'Finsta' do
 
   # Pods for Finsta
   pod 'Parse'
+  pod 'ParseUI'
 
 end

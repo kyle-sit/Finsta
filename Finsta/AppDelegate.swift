@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //Connect to our Parse database
@@ -30,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
+            return true
         }
         
         /*window = UIWindow(frame: UIScreen.main.bounds)
@@ -50,7 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()*/
-
         
         return true
     }
