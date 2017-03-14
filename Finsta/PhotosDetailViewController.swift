@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Parse
 
 class PhotosDetailViewController: UIViewController, UITextViewDelegate {
 
@@ -68,7 +69,6 @@ class PhotosDetailViewController: UIViewController, UITextViewDelegate {
 
     @IBAction func onShare(_ sender: Any) {
         Post.postUserImage(image: originalImage, withCaption: descriptionTextView.text) { (success: Bool, error: Error?) in
-            
             
             self.performSegue(withIdentifier: "postedSegue", sender: nil)
         }

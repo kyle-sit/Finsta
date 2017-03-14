@@ -12,7 +12,17 @@ import ParseUI
 
 class postCell: UITableViewCell {
 
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postImage: PFImageView!
+    @IBOutlet weak var caption: UILabel!
+    
+    var finstaPost: PFObject! { //PFObject we will give to each table cell
+        didSet {
+            //now that we have the PFObject, we can do things specifically in it
+            self.postImage.file = finstaPost["media"] as? PFFile
+            self.postImage.loadInBackground()
+            self.caption.text = finstaPost["caption"] as? String
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

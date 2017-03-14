@@ -34,28 +34,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-<key>NSCameraUsageDescription</key>
-<string>$(Finsta) needs access to use your camera</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(Finsta) needs access to use your camera</string>
 
-<key>NSPhotoLibraryUsageDescription</key>
-<string>$(Finsta) needs access to use your photo library</string>
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSExceptionDomains</key>
-    <dict>
-        <key>yourdomain.com</key>
-        <dict>
-            <!--Include to allow subdomains-->
-            <key>NSIncludesSubdomains</key>
-            <true/>
-            <!--Include to allow HTTP requests-->
-            <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-            <true/>
-            <!--Include to specify minimum TLS version-->
-            <key>NSTemporaryExceptionMinimumTLSVersion</key>
-            <string>TLSv1.1</string>
-        </dict>
-    </dict>
-</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(Finsta) needs access to use your photo library</string>
+	
+	<key>NSAppTransportSecurity</key>
+	<dict>
+   		<key>NSAllowsArbitraryLoads</key><true/>
+	</dict>
 </dict>
 </plist>

@@ -23,17 +23,45 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
+        self.feedTableView.estimatedRowHeight = 350
+        self.feedTableView.rowHeight = UITableViewAutomaticDimension
+        
         takePhotoButton.layer.cornerRadius = 5
         profileButton.layer.cornerRadius = 5
         
         takePhotoButton.clipsToBounds = true
         profileButton.clipsToBounds = true
+        
+        getPosts()
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getPosts()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getPosts() {
+        let query = PFQuery(className: "Post")
+        query.order(byDescending: "createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackground { (postsFromDB: [PFObject]?, error: Error?) in
+            if let postsFromDB = postsFromDB {
+                // do something with the data fetched
+                self.posts = postsFromDB
+                self.feedTableView.reloadData()
+                
+            } else {
+                // handle error
+            }
+        }
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -80,8 +108,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
-        let finstaPost = posts?[indexPath.row]
-        //cell.instagramPost = finstaPost as! PFObject
+        let finPost = posts?[indexPath.row]
+        cell.finstaPost = finPost as! PFObject
         
         return cell;
     }

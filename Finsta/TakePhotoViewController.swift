@@ -26,17 +26,19 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
-    // Get the image captured by the UIImagePickerController
-    let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-    let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        // Get the image captured by the UIImagePickerController
+        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
     
-    self.uploadedImage = resize(image: originalImage, newSize: CGSize(width: 800, height: 800))
-    self.resizedImage = resize(image: editedImage, newSize: CGSize(width: 800, height: 800))
+        self.uploadedImage = resize(image: originalImage, newSize: CGSize(width: 800, height: 800))
+        self.resizedImage = resize(image: editedImage, newSize: CGSize(width: 800, height: 800))
     
-    self.performSegue(withIdentifier: "addDetailsSegue", sender: nil)
+        //self.performSegue(withIdentifier: "addDetailsSegue", sender: nil)
         
-    // Dismiss UIImagePickerController to go back to your original view controller
-    dismiss(animated: true, completion: nil)
+        // Dismiss UIImagePickerController to go back to your original view controller
+        dismiss(animated: true, completion: nil)
+        
+        self.performSegue(withIdentifier: "addDetailsSegue", sender: nil)
     }
     
     
