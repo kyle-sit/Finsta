@@ -12,8 +12,8 @@ import ParseUI
 
 class postCell: UITableViewCell {
 
-    @IBOutlet weak var postImage: PFImageView!
     @IBOutlet weak var caption: UILabel!
+    @IBOutlet weak var postImage: PFImageView!
     
     var finstaPost: PFObject! { //PFObject we will give to each table cell
         didSet {

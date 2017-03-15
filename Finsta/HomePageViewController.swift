@@ -47,8 +47,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func getPosts() {
         let query = PFQuery(className: "Post")
-        query.order(byDescending: "createdAt")
-        query.includeKey("author")
+        query.order(byDescending: "_created_at")
+        query.includeKey("_p_author")
         query.limit = 20
         
         // fetch data asynchronously
