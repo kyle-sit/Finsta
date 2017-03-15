@@ -70,6 +70,7 @@ class PhotosDetailViewController: UIViewController, UITextViewDelegate {
     @IBAction func onShare(_ sender: Any) {
         Post.postUserImage(image: originalImage, withCaption: descriptionTextView.text) { (success: Bool, error: Error?) in
             
+            print("posted")
             self.performSegue(withIdentifier: "postedSegue", sender: nil)
         }
     }

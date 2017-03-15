@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Connect to our Parse database
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
             configuration.applicationId = "finsta"
+            configuration.clientKey = "Katari812"
             configuration.server = "https://finstaa.herokuapp.com/parse"
         }))
         

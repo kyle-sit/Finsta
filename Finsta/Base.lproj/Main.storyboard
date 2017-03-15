@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,27 +118,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJa-C3-U9Q">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJa-C3-U9Q" customClass="PFImageView">
                                                     <rect key="frame" x="62" y="8" width="250" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="4AE-F1-es1"/>
+                                                        <constraint firstAttribute="height" constant="250" id="g4h-eP-YRh"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NV-D2-2QC">
                                                     <rect key="frame" x="62" y="266" width="250" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="XDJ-rL-Nvz"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4NV-D2-2QC" firstAttribute="bottom" secondItem="MvT-Ki-sKV" secondAttribute="bottomMargin" id="2GF-Gt-x72"/>
-                                                <constraint firstItem="4NV-D2-2QC" firstAttribute="top" secondItem="XJa-C3-U9Q" secondAttribute="bottom" constant="8" symbolic="YES" id="BXe-66-qjP"/>
-                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="leading" secondItem="4NV-D2-2QC" secondAttribute="leading" id="U08-5Y-miF"/>
-                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="trailing" secondItem="4NV-D2-2QC" secondAttribute="trailing" id="csP-cX-lT8"/>
-                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="top" secondItem="MvT-Ki-sKV" secondAttribute="topMargin" id="d6T-mA-P5d"/>
-                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="leading" secondItem="MvT-Ki-sKV" secondAttribute="leadingMargin" constant="54" id="rpH-tP-mB3"/>
-                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="centerX" secondItem="MvT-Ki-sKV" secondAttribute="centerX" id="zKR-yB-zb5"/>
+                                                <constraint firstAttribute="trailing" secondItem="XJa-C3-U9Q" secondAttribute="trailing" constant="63" id="35x-Af-v8R"/>
+                                                <constraint firstAttribute="trailing" secondItem="4NV-D2-2QC" secondAttribute="trailing" constant="63" id="47a-St-sHR"/>
+                                                <constraint firstAttribute="bottom" secondItem="4NV-D2-2QC" secondAttribute="bottom" constant="8" id="8gt-zI-yqy"/>
+                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="top" secondItem="MvT-Ki-sKV" secondAttribute="top" constant="8" id="DAQ-XY-3hT"/>
+                                                <constraint firstItem="XJa-C3-U9Q" firstAttribute="leading" secondItem="MvT-Ki-sKV" secondAttribute="leading" constant="62" id="cvb-C8-nD5"/>
+                                                <constraint firstItem="4NV-D2-2QC" firstAttribute="top" secondItem="XJa-C3-U9Q" secondAttribute="bottom" constant="8" id="gzP-rQ-GqC"/>
+                                                <constraint firstItem="4NV-D2-2QC" firstAttribute="leading" secondItem="MvT-Ki-sKV" secondAttribute="leading" constant="62" id="tFg-gp-ajc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

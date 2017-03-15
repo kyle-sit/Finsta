@@ -51,6 +51,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         query.includeKey("_p_author")
         query.limit = 20
         
+        print("queried")
+        
         // fetch data asynchronously
         query.findObjectsInBackground { (postsFromDB: [PFObject]?, error: Error?) in
             if let postsFromDB = postsFromDB {
@@ -62,6 +64,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
                 // handle error
             }
         }
+        print("loaded posts to local")
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -100,16 +103,23 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let posts = posts {
+            print("not empty posts")
             return posts.count;
         } else {
+            print("empty posts")
             return 0
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
+        print("got the cell")
         let finPost = posts?[indexPath.row]
+        print("got the post")
+        print(finPost ?? 0)
         cell.finstaPost = finPost as! PFObject
+        
+        print("making cells")
         
         return cell;
     }

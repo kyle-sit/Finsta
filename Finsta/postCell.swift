@@ -18,9 +18,13 @@ class postCell: UITableViewCell {
     var finstaPost: PFObject! { //PFObject we will give to each table cell
         didSet {
             //now that we have the PFObject, we can do things specifically in it
+            print("error is here")
             self.postImage.file = finstaPost["media"] as? PFFile
+            //self.postImage.file = finstaPost["media"] as? PFFile
+            print("got pic")
             self.postImage.loadInBackground()
             self.caption.text = finstaPost["caption"] as? String
+            print("got caption")
         }
     }
     
